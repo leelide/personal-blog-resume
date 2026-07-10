@@ -197,8 +197,8 @@ function router() {
 function renderHome(container) {
   // 精選文章（拿第一篇）
   const featuredPost = appData.posts[0] || {};
-  // 最新文章（精選後面的兩篇）
-  const latestPosts = appData.posts.slice(1, 4);
+  // 最新文章（顯示前 4 篇，包含精選文章）
+  const latestPosts = appData.posts.slice(0, 4);
   const stats = appData.portfolio.stats || [];
 
   container.innerHTML = `
