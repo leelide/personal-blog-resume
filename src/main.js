@@ -11,7 +11,7 @@ const navItems = [
   { id: 'home', label: '首頁', hash: '#/', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>` },
   { id: 'blog', label: '文章紀錄', hash: '#/blog', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>` },
   { id: 'portfolio', label: '作品與履歷', hash: '#/portfolio', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>` },
-  { id: 'about', label: '關於設計', hash: '#/about', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>` }
+  { id: 'about', label: '關於我', hash: '#/about', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>` }
 ];
 
 // 解析 Markdown + YAML Frontmatter 的簡易函式
@@ -286,7 +286,7 @@ function renderHome(container) {
 // 2. 部落格列表視圖 (Blog View)
 function renderBlog(container) {
   container.innerHTML = `
-    <div class="posts-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); margin-top: 4rem;">
+    <div class="posts-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); margin-top: 1rem;">
       ${appData.posts.map(post => `
         <div class="post-card" onclick="window.location.hash = '#/blog/${post.id}'">
           <div class="post-img-wrapper">
@@ -324,14 +324,8 @@ function renderPortfolio(container) {
   const projects = appData.portfolio.projects || [];
 
   container.innerHTML = `
-    <!-- Header -->
-    <div class="portfolio-header-section">
-      <span class="portfolio-subtitle">PORTFOLIO & CURRICULUM VITAE</span>
-      <h2 class="portfolio-title">設計案例與專業資歷</h2>
-    </div>
-
     <!-- Projects Grid -->
-    <section style="margin-bottom: 5rem;">
+    <section style="margin-bottom: 5rem; margin-top: 1rem;">
       <header class="section-header">
         <h3 class="section-title">設計作品案例</h3>
         <div class="section-line"></div>
@@ -418,12 +412,7 @@ function renderAbout(container) {
   const profile = appData.portfolio.profile || {};
 
   container.innerHTML = `
-    <div class="portfolio-header-section">
-      <span class="portfolio-subtitle">ABOUT THE ARCHITECT</span>
-      <h2 class="portfolio-title">關於設計師</h2>
-    </div>
-
-    <div class="about-card">
+    <div class="about-card" style="margin-top: 1rem;">
       <div class="about-img-wrapper">
         <img class="about-img" src="${profile.avatar}?t=${Date.now()}" alt="${profile.name}">
       </div>
