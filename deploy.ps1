@@ -23,13 +23,26 @@ if ([string]::IsNullOrWhiteSpace($commitMsg)) {
 
 Write-Host ""
 Write-Host "--------------------------------------------------"
-Write-Host "[1/3] 正在將檔案加入 Git 暫存區..." -ForegroundColor Cyan
+Write-Host "[1/4] 正在自動掃描 posts 資料夾並更新文章索引..." -ForegroundColor Cyan
+
+$mdFiles = Get-ChildItem -Path "posts" -Filter *.md | Sort-Object LastWriteTime -Descending
+$postPaths = @()
+foreach ($file in $mdFiles) {
+    $postPaths += "posts/" + $file.Name
+}
+
+$jsonContent = $postPaths | ConvertTo-Json -Compress
+Set-Content -Path "src/data/posts.json" -Value $jsonContent -Encoding utf8
+Write-Host "👉 索引更新成功！共計將同步發布 $($postPaths.Count) 篇文章。" -ForegroundColor Green
+
+Write-Host ""
+Write-Host "[2/4] 正在將檔案加入 Git 暫存區..." -ForegroundColor Cyan
 git add .
 
-Write-Host "[2/3] 正在提交變更..." -ForegroundColor Cyan
+Write-Host "[3/4] 正在提交變更..." -ForegroundColor Cyan
 git commit -m $commitMsg
 
-Write-Host "[3/3] 正在推送到 GitHub..." -ForegroundColor Cyan
+Write-Host "[4/4] 正在推送到 GitHub..." -ForegroundColor Cyan
 git push
 
 if ($LASTEXITCODE -eq 0) {

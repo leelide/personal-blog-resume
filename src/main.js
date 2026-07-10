@@ -16,10 +16,12 @@ const navItems = [
 
 // 解析 Markdown + YAML Frontmatter 的簡易函式
 function parseMarkdown(mdText) {
-  const matches = mdText.match(/^---([\s\S]+?)---([\s\S]*)$/);
+  // 移除 UTF-8 BOM 檔頭與前後多餘空白，防止正則解析失敗
+  const cleanText = mdText.replace(/^\ufeff/, '').trim();
+  const matches = cleanText.match(/^---([\s\S]+?)---([\s\S]*)$/);
   if (!matches) {
     return {
-      content: typeof marked !== 'undefined' ? marked.parse(mdText) : mdText
+      content: typeof marked !== 'undefined' ? marked.parse(cleanText) : cleanText
     };
   }
   
