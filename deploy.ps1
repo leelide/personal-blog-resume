@@ -1,4 +1,4 @@
-# Set console output encoding to UTF-8 to support Chinese characters in terminal
+﻿# Set console output encoding to UTF-8 to support Chinese characters in terminal
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 Write-Host "==================================================" -ForegroundColor Yellow
