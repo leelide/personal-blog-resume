@@ -35,24 +35,19 @@ git push
 if ($LASTEXITCODE -eq 0) {
     Write-Host ""
     Write-Host "==================================================" -ForegroundColor Green
-    Write-Host "🎉 部署成功！最新變更將在 1 分鐘內於 GitHub Pages 上線。" -ForegroundColor Green
+    Write-Host "🎉 成功推送！最新變更正在同步至 GitHub Pages。" -ForegroundColor Green
+    Write-Host "👉 已為您開啟 GitHub Actions 部署進度頁面。" -ForegroundColor Green
+    Write-Host "👉 當頁面中的黃色圈圈旋轉圖示變成「綠色勾勾」時，即可重整網站看見新內容！" -ForegroundColor Green
     Write-Host "==================================================" -ForegroundColor Green
     
     # 自動開啟 GitHub Actions 進度頁面
     Start-Process "https://github.com/leelide/personal-blog-resume/actions"
-    
-    # 彈出 Windows 成功對話框
-    Add-Type -AssemblyName System.Windows.Forms
-    [System.Windows.Forms.MessageBox]::Show("成功推送！已為您開啟 GitHub 部署進度頁面。`n`n當該頁面的黃色圈圈旋轉圖示變成「綠色勾勾」時，代表網站已完成部署，此時重新整理您的網站頁面即可看見最新內容！", "LudeLee 部署系統", 0, 64)
 } else {
     Write-Host ""
+    Write-Host "==================================================" -ForegroundColor Red
     Write-Host "❌ [錯誤] 推送失敗！請檢查您的網路連線或 GitHub 存取權限。" -ForegroundColor Red
-    
-    # 彈出 Windows 失敗對話框
-    Add-Type -AssemblyName System.Windows.Forms
-    [System.Windows.Forms.MessageBox]::Show("推送失敗！請檢查網路連線或 GitHub 權限。", "LudeLee 部署系統 - 失敗", 0, 16)
+    Write-Host "==================================================" -ForegroundColor Red
 }
 
 Write-Host ""
-Write-Host "視窗將於 3 秒後自動關閉..."
-Start-Sleep -Seconds 3
+Read-Host "按 Enter 鍵關閉此視窗"
