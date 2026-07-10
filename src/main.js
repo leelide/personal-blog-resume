@@ -369,7 +369,7 @@ function renderPortfolio(container) {
       <div class="resume-section">
         <!-- Timeline -->
         <div class="timeline-container">
-          <h4 class="section-title" style="font-size: 1.25rem; margin-bottom: 1rem;">工作經歷</h4>
+          <h4 class="section-title" style="font-size: 1.25rem; margin-bottom: 1.5rem;">工作經歷</h4>
           ${experiences.map(exp => `
             <div class="timeline-item">
               <span class="timeline-dot"></span>
@@ -377,6 +377,17 @@ function renderPortfolio(container) {
               <div class="timeline-title">${exp.title}</div>
               <div class="timeline-company">${exp.company}</div>
               <p class="timeline-details">${exp.details}</p>
+            </div>
+          `).join('')}
+
+          <h4 class="section-title" style="font-size: 1.25rem; margin-top: 2.5rem; margin-bottom: 1.5rem;">教育背景</h4>
+          ${(appData.portfolio.education || []).map(edu => `
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-period">${edu.period}</div>
+              <div class="timeline-title">${edu.title}</div>
+              <div class="timeline-company">${edu.school}</div>
+              <p class="timeline-details">${edu.details}</p>
             </div>
           `).join('')}
         </div>
