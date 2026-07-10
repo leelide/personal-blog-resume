@@ -286,12 +286,7 @@ function renderHome(container) {
 // 2. 部落格列表視圖 (Blog View)
 function renderBlog(container) {
   container.innerHTML = `
-    <div class="portfolio-header-section">
-      <span class="portfolio-subtitle">RECORDS & INSIGHTS</span>
-      <h2 class="portfolio-title">設計隨筆與工法紀錄</h2>
-    </div>
-
-    <div class="posts-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+    <div class="posts-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); margin-top: 4rem;">
       ${appData.posts.map(post => `
         <div class="post-card" onclick="window.location.hash = '#/blog/${post.id}'">
           <div class="post-img-wrapper">
