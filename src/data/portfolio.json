@@ -1,0 +1,93 @@
+{
+  "profile": {
+    "name": "李昱德",
+    "englishName": "Yude Li",
+    "title": "創辦人 / 資深室內設計師",
+    "bio": "專注於現代極簡與侘寂風（Wabi-Sabi）住宅規劃。深信好的設計不只是美感的堆砌，而是透過材料的真實觸感、柔和的間接光源與合適的留白，去設計空間帶給居住者的安靜感受。讓家，成為心靈最溫暖的歸處。",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "email": "yude.design@example.com",
+    "github": "https://github.com/yudeli-design",
+    "linkedin": "https://linkedin.com",
+    "phone": "+886 912 345 678"
+  },
+  "stats": [
+    {
+      "value": "512+",
+      "label": "雙向連結筆記",
+      "description": "基於 Obsidian 進行系統化知識沉澱與學習管理"
+    },
+    {
+      "value": "15+",
+      "label": "核心工具鏈",
+      "description": "熟練掌握 SketchUp、Ruby 腳本、n8n 與前端開發"
+    },
+    {
+      "value": "24+",
+      "label": "實踐與完工專案",
+      "description": "涵蓋空間規劃、自動化工作流與網頁開發專案"
+    }
+  ],
+  "experiences": [
+    {
+      "period": "2022 - 至今",
+      "title": "創辦人暨設計總監",
+      "company": "李昱德室內設計事務所",
+      "details": "專注於暖沙侘寂風與現代極簡住宅空間設計，提供從平面配置、3D 渲染模擬、工程發包到軟裝佈置的一條龍服務。累計完成超過 30 個高端住宅專案。"
+    },
+    {
+      "period": "2019 - 2022",
+      "title": "專案室內設計師",
+      "company": "琢墨空間設計",
+      "details": "主導複層住宅與老屋翻新專案之設計及監工。協調木工、水電、泥作等各工種，負責案場進度控管與建材挑選，解決複雜的結構與收邊工法。"
+    },
+    {
+      "period": "2017 - 2019",
+      "title": "助理設計師",
+      "company": "木石空間美學",
+      "details": "協助繪製 CAD 施工圖（平面、立面、剖面圖）、Sketchup 3D 模型建立，並與業主進行初期需求訪談與材料樣板整理。"
+    }
+  ],
+  "skills": [
+    {
+      "category": "設計美學 & 規劃",
+      "items": ["空間格局配置", "暖沙侘寂風格提案", "軟裝色彩搭配", "無主燈光影設計", "動線與收納規劃"]
+    },
+    {
+      "category": "工程實務 & 監工",
+      "items": ["木作收邊工法", "水電管路配置", "泥作防水監控", "建材物料採購", "預算與時程控管"]
+    },
+    {
+      "category": "軟體技能",
+      "items": ["AutoCAD 施工圖", "SketchUp 3D 建模", "V-Ray / Enscape 渲染", "Photoshop 後製", "Microsoft Project"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "日光沙丘 - 暖沙侘寂住宅",
+      "style": "日式侘寂風",
+      "year": "2026",
+      "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+      "description": "一個座落於新北市的 35 坪住宅。我們移除客廳與書房的實體牆面，改以格柵與暖沙色塗料牆連貫空間。利用大面積弧形天花板虛化大樑，並配置無主燈線性光帶，使自然日光與人造光源流暢交織。",
+      "features": ["35坪 / 3房2廳", "全室進口礦物塗料", "無主燈設計", "弧形天花板"]
+    },
+    {
+      "id": "project-2",
+      "title": "重力與留白 - 現代極簡複層",
+      "style": "現代極簡風",
+      "year": "2025",
+      "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+      "description": "樓中樓格局的挑高住宅。我們以鐵件懸疊樓梯為核心，搭配大面積的橡木鋼刷木皮與深灰色啞光板材。極限留白的玄關與客廳，僅以一件經典單椅與細枝綠植點綴，突顯純粹的幾何線條美感。",
+      "features": ["52坪 / 挑高複層", "橡木鋼刷木皮", "懸疊懸空樓梯", "藝術單椅端景"]
+    },
+    {
+      "id": "project-3",
+      "title": "時光交界 - 50年老屋再生",
+      "style": "人文極簡風",
+      "year": "2024",
+      "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
+      "description": "將一間光線陰暗、格局破碎的 50 年老公寓，改造成明亮通透的辦公兼住宅空間。重新梳理水電管線與防水層，利用玻璃拉門引入雙面採光，並保留局部紅磚肌理貼上白漆，形成新舊交疊的詩意空間。",
+      "features": ["28坪 / 老屋翻新", "雙面採光梳理", "鋼鋁玻璃拉門", "保留歷史肌理"]
+    }
+  ]
+}

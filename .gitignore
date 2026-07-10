@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+dist/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE configuration files
+.vscode/
+.idea/
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
