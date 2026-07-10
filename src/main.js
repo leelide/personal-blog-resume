@@ -417,7 +417,7 @@ function renderAbout(container) {
 
     <div class="about-card">
       <div class="about-img-wrapper">
-        <img class="about-img" src="${profile.avatar}" alt="${profile.name}">
+        <img class="about-img" src="${profile.avatar}?t=${Date.now()}" alt="${profile.name}">
       </div>
       <div class="about-details">
         <h3 class="about-title">${profile.name} <span style="font-size: 1.1rem; font-weight: normal; color: var(--text-muted);">${profile.englishName}</span></h3>
