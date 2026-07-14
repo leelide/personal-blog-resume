@@ -2,7 +2,7 @@
 id: obsidian-system-setup
 title: 給自己蓋一間數位小屋：我的 Obsidian 數位大腦建置手記
 category: 技術分享
-date: 2026.07.10
+date: 2026.04.13
 summary: 面對每天繁雜的設計案、工地瑣事與學習計畫，我曾深陷在數位工具的整理焦慮中。這篇文章記錄了我回歸 Obsidian，用最簡單的 PARA 與 Daily 模板，為自己手動建置一個「沒有罪惡感」、順應人性的數位大腦的過程與心路歷程。
 image: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80
 ---
