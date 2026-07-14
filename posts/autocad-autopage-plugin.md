@@ -4,7 +4,7 @@ title: 逃離「頁碼地獄」：我如何用 AutoLISP 寫出「自動頁碼」
 category: 技術分享
 date: 2026.07.14
 summary: 在室內設計繪製施工圖的過程中，頻繁調整配置分頁順序是常有的事。然而，手動逐頁修改圖框裡的頁碼（PAGE_NO）卻是個極度消磨心智的繁瑣工作。本文記錄了我如何透過 AutoLISP 腳本 (AutoPage.lsp)，利用 AutoCAD 的 TabOrder 物理順序自動排序，實現一鍵秒級批量更新所有配置頁碼的自動化歷程。
-image: https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80
+image: https://images.unsplash.com/photo-1503387762-592dec5804fc?auto=format&fit=crop&w=800&q=80
 ---
 
 在室內設計師的日常裡，繪製一整套完整的施工圖——從拆除、平面、天花板到各個立面細部折圖——就像是用線條蓋一棟精緻的房子。
