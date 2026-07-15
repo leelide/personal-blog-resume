@@ -71,6 +71,34 @@ UpdatePage
 
 ***
 
-> **工具路徑與原始碼存檔**：
-> - 腳本檔案：[AutoPage.lsp](file:///G:/%E6%88%91%E7%9A%84%E9%9B%B2%E7%AB%AF%E7%A1%AC%E7%A2%9F/Markdown%E5%84%B2%E5%AD%98%E5%BA%AB/02_Areas%20(%E4%BD%A0%E7%9A%84%E9%95%B7%E6%9C%9F%E6%8A%80%E8%83%BD%E8%88%87%E8%BA%AB%E5%88%86)/%E5%AE%A4%E5%85%A7%E8%A8%AD%E8%A8%88/%E8%BB%9F%E9%AB%94%E5%B7%A5%E4%BD%9C%E6%B5%81/%E8%87%AA%E5%8B%95%E9%A0%81%E7%A2%BC/AutoPage.lsp)
-> - 使用說明書：[安裝後使用指令 UpdatePage.txt](file:///G:/%E6%88%91%E7%9A%84%E9%9B%B2%E7%AB%AF%E7%A1%AC%E7%A2%9F/Markdown%E5%84%B2%E5%AD%98%E5%BA%AB/02_Areas%20(%E4%BD%A0%E7%9A%84%E9%95%B7%E6%9C%9F%E6%8A%80%E8%83%BD%E8%88%87%E8%BA%AB%E5%88%86)/%E5%AE%A4%E5%85%A7%E8%A8%AD%E8%A8%88/%E8%BB%9F%E9%AB%94%E5%B7%A5%E4%BD%9C%E6%B5%81/%E8%87%AA%E5%8B%95%E9%A0%81%E7%A2%BC/%E5%AE%89%E8%A3%9D%E5%BE%8C%E4%BD%BF%E7%94%A8%E6%8C%87%E4%BB%A4%20UpdatePage.txt)
+### 📥 插件免費下載 (Free Download)
+
+我將這個 AutoLISP 插件整理為一個獨立檔案，歡迎所有飽受頁碼修改折磨的設計師、繪圖員點擊下方連結下載使用：
+
+👉 [**點我下載 AutoPage.lsp 插件**](./AutoPage.lsp)
+
+---
+
+### 📖 快速安裝與使用教學 (Step-by-Step Tutorial)
+
+#### 第一步：確保您的圖卡/圖框具備「頁碼屬性」
+本插件是透過尋找圖紙中的**屬性圖塊**來進行自動填寫的。
+1. 在您的 AutoCAD 圖框（通常是屬性塊 Block）中，點選進入「區塊編輯器」或雙擊屬性。
+2. 確保用來標示頁碼的**屬性標籤 (Tag)** 名稱精確設定為：**`PAGE_NO`** (大小寫不限，程式會自動處理空格)。
+3. 儲存圖框區塊，並將其套用到所有的 Layout 配置中。
+
+#### 第二步：在 AutoCAD 中載入 LISP 腳本
+1. 開啟您的 AutoCAD 軟體與圖紙。
+2. 在下方命令列輸入 `APPLOAD` 並按下 Enter。
+3. 在彈出的視窗中，選取剛才下載的 `AutoPage.lsp` 檔案，點選 **「載入 (Load)」**。
+4. *(選用)* 若您希望以後每次開啟 AutoCAD 都自動載入此工具，可以將 `AutoPage.lsp` 拖曳到 APPLOAD 視窗右下角的**「啟動套件 (Startup Suite)」**（黃色小書包圖示）中。
+
+#### 第三步：一鍵執行自動頁碼更新
+1. 在命令列輸入：
+   ```text
+   UpdatePage
+   ```
+2. 按下 Enter 鍵。
+3. 您會看見視窗自動切換並掃描每一個配置頁籤，程式會依據分頁的左右實體排列順序，自動將數值依序寫入圖框中的 `PAGE_NO` 欄位（自動跳過模型 Model 空間）。
+4. 終端機顯示「*全部頁碼已依照標籤順序更新完成！*」即宣告大功告成！
+
