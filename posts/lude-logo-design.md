@@ -4,7 +4,7 @@ title: 空間與符號的交會：LudeLee 個人品牌 LUDE LOGO 設計故事
 category: 設計心法
 date: 2026.07.15
 summary: 作為一名室內設計師，品牌識別不僅僅是名字的縮寫，更是空間美學的縮影。本文分享了我如何以精簡的幾何線條，將「LUDE」字母與現代建築輪廓融合，設計出富含結構感與空間感的核心品牌 LOGO。
-image: ./logo.png
+image: https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80
 ---
 
 平面設計與室內設計，看似是兩個不同的維度，但在「美學與結構」的本質上，它們共享著同一套語言。
