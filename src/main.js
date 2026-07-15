@@ -98,9 +98,9 @@ function renderNavigations() {
 
   // 1. 桌面端 Top Header
   header.innerHTML = `
-    <div class="header-logo" onclick="window.location.hash = '#/'" style="display: flex; align-items: center; gap: 0.75rem;">
+    <div class="header-logo" onclick="window.location.hash = '#/'" style="display: flex; flex-direction: row; align-items: center; gap: 0.75rem;">
       <img src="./logo.png" alt="LudeLee Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;">
-      <div style="display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
         <span class="logo-title">LudeLee</span>
         <span class="logo-sub">INTERIOR DESIGN</span>
       </div>
